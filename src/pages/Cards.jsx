@@ -81,7 +81,7 @@ const CardsPage = () => {
             ))}
       </Wrapper>
 
-      <Button onClick={loadCards}>Reveal Cards</Button>
+      {cards.length === 0 && <Button onClick={loadCards}>Reveal Cards</Button>}
     </>
   );
 };
