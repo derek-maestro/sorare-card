@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  border: 1px solid #bfafaf;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
 `;
 export const CardSection = styled.div`
   height: 460px;
