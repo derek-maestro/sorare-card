@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
 import Card from "../components/Card";
 import { CARD_QUERY } from "../queries/Card.query";
+
+const LoadingWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+`;
 
 const CardsPage = () => {
   const [card, setCard] = useState({});
@@ -34,7 +43,7 @@ const CardsPage = () => {
     fetchData();
   }, [slug]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <LoadingWrapper>Loading...</LoadingWrapper>
 
   return <Card card={card} />;
 };
