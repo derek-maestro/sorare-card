@@ -62,7 +62,6 @@ const Button = styled.button`
 const CardsPage = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   const { slugs: slugsFromUrl } = useParams();
   const slugs = slugsFromUrl.split(",").map((s) => s.trim());
 
@@ -95,14 +94,13 @@ const CardsPage = () => {
       }
     );
     setLoading(false);
-    setLoaded(true);
   };
 
   if (loading) return <LoadingWrapper>Loading...</LoadingWrapper>;
 
   return (
     <Wrapper>
-      {loaded ? (
+      {cards.length ? (
         cards.map((card) => <Card card={card} key={card.id} />)
       ) : (
         <>
