@@ -4,10 +4,8 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1px solid #bfafaf;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 8px;
+  border: 1px solid #303030;
+  filter: ${props => props.blur ? 'blur(8px)' : 'none'};
 `;
 export const CardSection = styled.div`
   height: 460px;
@@ -36,7 +34,7 @@ export const CardSection = styled.div`
 
 export const DetailSection = styled.div`
   margin: auto;
-  padding: 50px 40px 90px 40px;
+  padding: 20px 30px;
   max-width: 1280px;
   width: 100%;
 
@@ -49,13 +47,13 @@ export const DetailSection = styled.div`
     text-align: left;
 
     color: #0d0c11;
-    margin: 20px 0px;
+    margin: 10px 0px;
   }
 
   .personal-info {
     display: flex;
     align-items: center;
-    margin-bottom: 52px;
+    margin-bottom: 32px;
     flex-direction: col;
     justify-content: space-between;
 
@@ -65,6 +63,7 @@ export const DetailSection = styled.div`
       font-weight: 700;
       line-height: 27px;
       letter-spacing: -0.02em;
+      margin: 0;
     }
   }
 

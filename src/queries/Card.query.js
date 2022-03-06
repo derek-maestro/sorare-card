@@ -12,6 +12,7 @@ export const CARD_QUERY = `
           name
           pictureUrl
           code
+          slug
         }
         pictureUrl
         position

@@ -1,0 +1,30 @@
+{
+  "id": "Card:b6ad3d97-a921-45fc-9289-3bbcec2140cf",
+  "name": "Marco Verratti 2021-22 • Unique",
+  "age": 28,
+  "pictureUrl": "https://assets.sorare.com/card/b6ad3d97-a921-45fc-9289-3bbcec2140cf/picture/22f0f6d222170afec1f937e03f2483ba.png",
+  "player": {
+    "id": "Player:6656e32e-b63d-4c45-832d-ec09618a4a28",
+    "displayName": "Marco Verratti",
+    "activeClub": {
+      "name": "Paris Saint-Germain FC",
+      "pictureUrl": "https://assets.sorare.com/club/8d0bc975-3a87-4623-9086-e57545f8c6df/picture/0f64d74d87188e2ba7c4001ecbd6d1f0.png",
+      "code": "PSG",
+      "slug": "#"
+    },
+    "pictureUrl": "https://assets.sorare.com/seasonpicture/da27158e-e66a-41c1-a460-221756676c2e/picture/3e0641e6a15b6eac264189c297219a4a.png",
+    "position": "Midfielder",
+    "slug": "#"
+  },
+  "power": "1.460",
+  "priceRange": {
+    "min": "6305079665102646272",
+    "max": "63050796651026464768"
+  },
+  "season": {
+    "id": "Season:832ef2c6-0c8b-40ec-8b68-fbf0bfa7cd39",
+    "name": "2021-22",
+    "startYear": 2021
+  },
+  "slug": "#"
+}

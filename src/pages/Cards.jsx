@@ -1,46 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 import Card from "../components/Card";
 import { CARD_QUERY } from "../queries/Card.query";
 
-const LoadingWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-`;
+import dummyData from "./data.json";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 60px 30px;
   width: 100%;
-`;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
 
-const Placeholder = styled.div`
-  padding: 20px;
-  display: flex;
-  height: 120px;
-  align-items: center;
-  justify-content: flex-start;
-  border: 1px solid #f1f0f5;
-  background: #fff;
-  border-radius: 8px;
-  text-align: left;
-  margin-bottom: 10px;
-  cursor: pointer;
-  text-transform: capitalize;
-
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-
-  :hover {
-    font-weight: bold;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
@@ -96,24 +71,18 @@ const CardsPage = () => {
     setLoading(false);
   };
 
-  if (loading) return <LoadingWrapper>Loading...</LoadingWrapper>;
-
   return (
-    <Wrapper>
-      {cards.length ? (
-        cards.map((card) => <Card card={card} key={card.id} />)
-      ) : (
-        <>
-          {slugs.map((slug) => (
-            <Placeholder key={slug}>{slug.replaceAll("-", " ")}</Placeholder>
-          ))}
+    <>
+      <Wrapper>
+        {cards.length
+          ? cards.map((card) => <Card card={card} key={card.id} />)
+          : slugs.map((slug) => (
+              <Card card={dummyData} blur={true} loading={loading} key={slug} />
+            ))}
+      </Wrapper>
 
-          <div>
-            <Button onClick={loadCards}>LOAD CARDS</Button>
-          </div>
-        </>
-      )}
-    </Wrapper>
+      <Button onClick={loadCards}>Reveal Cards</Button>
+    </>
   );
 };
 
