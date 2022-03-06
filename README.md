@@ -11,6 +11,8 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+To test the final result, please visit: [http://localhost:3000/cards/marco-verratti-2021-unique-1,marco-verratti-2021-rare-1](http://localhost:3000/cards/marco-verratti-2021-unique-1,marco-verratti-2021-rare-1)
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
